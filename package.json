@@ -1,0 +1,19 @@
+{
+  "name": "email-sending-system",
+  "version": "1.0.0",
+  "description": "A simple email sender app using Node.js and Gmail",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": ["email", "nodemailer", "gmail"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1",
+    "nodemailer": "^7.0.12",
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10"
+  }
+}
