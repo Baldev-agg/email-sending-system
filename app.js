@@ -48,20 +48,20 @@ app.post("/send-email", async (req, res) => {
     // Send email
     const info = await transporter.sendMail(mailOptions);
     
-    console.log("✅ Email sent successfully to:", recipient);
+    console.log("Email sent successfully to:", recipient);
     console.log("Message ID:", info.messageId);
     
     res.send(`
-      <h2>✅ Email sent successfully!</h2>
+      <h2>Email sent successfully!</h2>
       <p>Recipient: ${recipient}</p>
       <p>Subject: ${subject}</p>
       <p><a href="/">Send another email</a></p>
     `);
 
   } catch (error) {
-    console.error("❌ Email Error:", error.message);
+    console.error("Email Error:", error.message);
     res.status(500).send(`
-      <h2>❌ Error sending email</h2>
+      <h2>Error sending email</h2>
       <p><strong>Error:</strong> ${error.message}</p>
       <p><a href="/">Try again</a></p>
     `);
@@ -70,6 +70,6 @@ app.post("/send-email", async (req, res) => {
 
 // Start server
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`);
+  console.log(`Server running on http://localhost:${PORT}`);
 });
 
