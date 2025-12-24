@@ -20,6 +20,7 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
+// Send Email Route
 app.post("/send-email", async (req, res) => {
   try {
     const { recipient, subject, message } = req.body;
